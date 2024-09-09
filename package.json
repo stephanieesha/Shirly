@@ -2,7 +2,7 @@
   "name": "finance",
   "version": "1.0.0",
   "description": "a finance app to help Esha manage her expenses and finances ",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
