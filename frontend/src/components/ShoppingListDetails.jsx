@@ -92,6 +92,7 @@ function ShoppingListDetails(){
     var ReviewedLis
     ReviewedLis = localStorage.getItem('doneItems', [])
 
+
     const disableItem = (index) => {
         let elements = getElementsfromLocalStorage();
         elements = elements.filter((item, i) => i == index);
@@ -109,7 +110,8 @@ function ShoppingListDetails(){
         let u = r.flat()
             setBallName(u)
     }
-    
+
+    const v = allLists.filter(f => shoppingListObject.every(item => item._id !== f._id));
     const addShoppingListItem = () => {
         setc(!c)
     }
@@ -170,8 +172,9 @@ function ShoppingListDetails(){
         let listItemId = selectName[0]._id
         let updateUserListData = {itemDisabled : false, shoppingInProgress: true}
         dispatch(updateUserList({ listItemId, updateUserListData }))
-        ballName.filter((item) => item == selectName)
-        // console.log(generalList)
+        let ip = ballName.filter(f => selectName.every(item => item._id !== f._id));
+        console.log(ip)
+            setBallName(ip)
 
     }
 
@@ -179,7 +182,7 @@ function ShoppingListDetails(){
         
         let x = e.target.value
         
-        let generalList = allName.filter((item) => item.name == x)
+        let generalList = v.filter((item) => item.name == x)
 
         setSelectName(generalList)
 
@@ -191,9 +194,8 @@ const onSelectDisabledName = (e) => {
     let x = e.target.value
     
     let generalList = ballName.filter((item) => item.name == x)
-
+    let ou = ballName.filter((item) => item.name !== x)
     setSelectName(generalList)
-    console.log(generalList)
     return generalList
 }
 
@@ -264,7 +266,7 @@ const onSelectDisabledName = (e) => {
        let  elementy = elementa.filter((item, i) => i == index);
 
         let y = elementy.map(x => x)
-        let r = [allName, ...y]
+        let r = [v, ...y]
         let u = r.flat()
             setAllName(u)
         }
@@ -534,7 +536,7 @@ const saveChanges = (index) => {
                                     <div style={{marginRight: "15px"}}>
                                         <select onChange={onSelectName} onClick={getNames} className="name-select" >
                                             <option value="" disabled selected>Select Item</option>
-                                            {allName.map((x,i) => (
+                                            {v.map((x,i) => (
                                                 <>
                                                     <option key={x} value={x.name}>
                                                         {x.name}

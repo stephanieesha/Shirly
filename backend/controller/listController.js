@@ -9,7 +9,7 @@ const moment= require('moment')
 const _ = require("lodash");
 
 const getUserLists = asyncHandler(async(req, res) => {
-    const lists = await List.find({ id: req.user_id })
+    const lists = await List.find({ user: req.user._id })
     res.status(200).json(lists)
 })
 
