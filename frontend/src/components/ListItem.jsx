@@ -140,9 +140,17 @@ const saveChangesCompleted = (list, x) =>{
         </Col>
         <Col xs={12} sm={3} md={1} lg={1}>
           <div>
-            <Link to={`/${list.listName}/lists/${list._id}/`} onClick={() =>getClickedListItem()}><MdOutlineMoreHoriz style={{marginRight: "10px"}}/></Link>
-            <AiFillDelete style={{cursor:'pointer'}} onClick={() =>deleteClickedListItem(list._id)} />
-            <CiSaveUp1 style={{cursor:'pointer', marginLeft: "10px"}} onClick={() =>saveChangesCompleted(list._id, list.listName)} />
+            <Row>
+              <Col xs={4} sm={4} md={4} lg={4}>
+                <Link to={`/${list.listName}/lists/${list._id}/`} onClick={() =>getClickedListItem()}><MdOutlineMoreHoriz style={{marginRight: "10px"}}/></Link>
+              </Col>
+              <Col xs={4} sm={4} md={4} lg={4}>
+                <AiFillDelete style={{cursor:'pointer'}} onClick={() =>deleteClickedListItem(list._id)} />
+              </Col>
+              <Col xs={4} sm={4} md={4} lg={4}>
+                <CiSaveUp1 style={{cursor:'pointer'}} onClick={() =>saveChangesCompleted(list._id, list.listName)} />
+              </Col>
+            </Row>
           </div>
         </Col>
       </Row>

@@ -32,7 +32,7 @@ function NewList(){
     const [brand, setBrand] = useState('')
     const [quantity, setQuantity] = useState('')
     const [unitPrice, setUnitPrice] = useState('')
-    const [frequency, setFrequency] = useState('')
+    const [frequency, setFrequency] = useState('Nill')
     const [comment, setComment] = useState('')
     const [c, setc] = useState(false)
     const [showBarChart, setShowBarChart] = useState(false)
@@ -272,6 +272,7 @@ function NewList(){
                                             placeholder='Frequency'
                                         >   
                                             <option value="" disabled selected>Select Item</option>
+                                            <option value="Nill">Nill</option>
                                             <option value="Everyday">Everyday</option>
                                             <option value="Every 2 days">Every 2 days</option>
                                             <option value="Every 3 days">Every 3 days</option>
@@ -282,7 +283,6 @@ function NewList(){
                                             <option value="Every 3 months">Every 3 months</option>
                                             <option value="Every 6 months">Every 6 months</option>
                                             <option value="Yearly">Yearly</option>
-                                            <option value="Nill">Nill</option>
                                         </select>
                                         <button type="button" className='btn btn-span' onClick={clearFrequencyEntry}>x</button>
                                     </div>

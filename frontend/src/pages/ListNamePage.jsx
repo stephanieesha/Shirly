@@ -109,10 +109,17 @@ function ListNamePage(){
                         <Link to="shoppingListDetails">
 
                         <div className='shoppingList-headings'>
-                            <div>Name</div>
-                            <div>Quantity</div>
-                            <div>Price</div>
-                            <div></div>
+                            <Row>
+                                <Col xs={4} sm={4} md={4} lg={4}>
+                                    <div>Name</div>
+                                </Col>
+                                <Col xs={4} sm={4} md={4} lg={4}>
+                                    <div>Quantity</div>
+                                </Col>
+                                <Col xs={4} sm={4} md={4} lg={4}>
+                                    <div>Price</div>
+                                </Col>
+                            </Row>
                         </div>
                         {
                         shoppingListObject ?
