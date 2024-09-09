@@ -23,9 +23,8 @@ function RegisterPage(){
     (state => state.auth)
 
     useEffect(() => {
-        if(isError){
-            toast.error(message)
-        }
+
+        
         if(isSuccess || user) {
             navigate('/')
         }

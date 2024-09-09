@@ -11,7 +11,6 @@ import {createListName, getListNames, reset} from '../features/listName/listName
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { gerUserLists, getUserLists, updateLastBought, updateUserList, updateAll} from "../features/auth/authSlice"
 import { GiSightDisabled } from "react-icons/gi";
-import { Tooltip } from "react-tooltip";
 import { useNavigate, useParams } from "react-router-dom";
 import { CiSaveUp1 } from "react-icons/ci";
 import { Container, Row, Col } from "react-bootstrap";

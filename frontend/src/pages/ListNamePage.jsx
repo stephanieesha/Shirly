@@ -59,9 +59,6 @@ function ListNamePage(){
         setItemName(e.target.value)
     }
     useEffect(() => {
-        if(isError){
-            toast.error(message)
-        }
         if(isSuccess){
             dispatch(reset())
         }

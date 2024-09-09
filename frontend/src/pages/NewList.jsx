@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AiFillDelete } from "react-icons/ai";
 import { useParams,useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { createList, getLists,getList, reset } from "../features/lists/listSlice";
 import { createListName, getListNames, resetListName , getListName} from "../features/listName/listNameSlice";
 import ListItem from "../components/ListItem";
@@ -67,8 +66,8 @@ function NewList(){
     }
 
     useEffect(() => {
-        dispatch(getListName(listNameId)).unwrap().catch(toast.error)
-        dispatch(getLists(listNameId)).unwrap().catch(toast.error)
+        dispatch(getListName(listNameId))
+        dispatch(getLists(listNameId))
 
     }, [listNameId,dispatch, isError, isSuccess, navigate, message])
 
