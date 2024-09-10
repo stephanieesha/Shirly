@@ -20,7 +20,7 @@ function Header(){
                 <Col xs={12}>
                     <div className='header'>
                         <div >
-                            <Link to='/'>Shirley</Link>
+                            <Link to='/'><h4>Shirley</h4></Link>
                         </div>
                         <ul>
                             {user ? 
