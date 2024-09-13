@@ -12,8 +12,8 @@ function ShoppingList({ShoppingListItem}){
   return (
     <div className='shoppingList shoppingList-items'>
       <div>{ShoppingListItem.name}</div>
-      <div>{ShoppingListItem.quantity}</div>
       <div>{ShoppingListItem.price}</div>
+      <div>{ShoppingListItem.comment}</div>
       <div></div>
     </div>
   )

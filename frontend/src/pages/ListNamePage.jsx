@@ -114,10 +114,10 @@ function ListNamePage(){
                                     <div>Name</div>
                                 </Col>
                                 <Col xs={4} sm={4} md={4} lg={4}>
-                                    <div>Quantity</div>
+                                    <div>Price</div>
                                 </Col>
                                 <Col xs={4} sm={4} md={4} lg={4}>
-                                    <div>Price</div>
+                                    <div>Comment</div>
                                 </Col>
                             </Row>
                         </div>
