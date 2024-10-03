@@ -25,8 +25,9 @@ function ShoppingListDetails(){
     // var doneShoppingList = localStorage.getItem('doneItems')
     // var doneShoppingListObject = JSON.parse(doneShoppingList)
     //var shoppingList = localStorage.getItem('shoppingList')
-    
     var shoppingListObject = JSON.parse(shoppingList)
+
+    
 
    // var completedListObject = JSON.parse(completedList)
     const { listNames } = useSelector((state) => state.listNames)

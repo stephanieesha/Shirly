@@ -230,7 +230,7 @@ const updateAll = asyncHandler(async(req, res) => {
                             frequency: doc.frequency,
                             comment: doc.comment ,
                             shoppingInProgress: false,
-                            totalSpent: doc.boughtAt.reduce((n, {price}) => n+ price, 0)
+                            totalSpent: doc.boughtAt.reduce((n, {price}) => n+ price, 0) + doc.price
 
                         },
                         $push: { 
